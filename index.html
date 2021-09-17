@@ -1,0 +1,364 @@
+<!DOCTYPE html> <!-- to jest komendarz, widoczny dla programisty, nie widoczny dla user'a -->
+<html lang="pl"> <!-- ,,lang="" - atrybut  ||  pl-wartość atrybutu || każda strona musi mieć atrybut ,,lang" || zmiana języka strony też tutaj zmienia język-->
+<head>	<!-- znacznik --> <!-- część opisowa strony -->
+	<meta name="viewport" content="initial-scale=1, width=device-width" /> <!-- ,,content" przybliżanie na telefonach -->
+	
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"> <!-- &amp; nie można używać ,,&" -->
+	<link rel="stylesheet" href="css/aos.css">			
+	<link rel="stylesheet" href="css/owl.carousel.min.css">																		<!--animacje-->
+	<link rel="stylesheet" href="css/style.css">
+
+	<meta charset="utf-8" >
+	
+	<title>Tytuł wyświetlany</title>
+	
+	<script src="js/jquery-3.6.0.min.js"></script>		<!-- ładownie jquery oraz pliku ze skryptem -->
+	<script src="js/aos.js"></script>
+	<script src="js/owl.carousel.min.js"></script>	
+	<script src="js/Tmpl.js"></script>
+	
+</head>
+<body>
+	<header>	<!-- jeśli jest jedna strona lepiej się pozycjonuje -->
+		<div class="linetop">
+			<div class="center flexBlock">
+				<div class="user flexBlock transitionEl">
+					<span class="image"></span>
+					<a href="#" class="red">rejestracja</a>
+					<span class="brake">/</span>
+					<a href="#">logowanie</a>
+				</div>
+				<ul class="adresy flexBlock">
+					<li>
+						<a href="tel:+48123456789" class="flexBlock">
+							<img src="images/icons/phone.png" alt="" />
+							<span> +48 123 456 789 </spam>
+						</a>
+					</li>
+					<li>
+						<a target="blank" href="https://www.google.com/maps/place/?q=jana+kochanowskiego+28a+kraków" class="flexBlock">
+							<img src="images/icons/placeholder.png" alt="" />
+							<span>Kraków, Kochanowskiego 21 a</spam>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="linebottom center flexBlock">
+			<a href="/">
+				<img src="images/logo.png" alt="" />
+			</a>
+			<span class="break"></span>
+			<nav>																													 <!-- nav jest blokowe -->
+				<a href="#mobile" onclick="Test.mobile(); return false"  class="mobile flexBlock" >MENU<span class="transitionEl"></span></a>
+				<ul class="flexBlock" >
+					<li>
+						<a href="#">Strona główna</a>						<!--return false - wyłącza link--> <!-- onclick="Test.zmientlo(); return false" -->
+					</li>
+					<li>
+						<a href="#">Oferta</a>
+					</li>
+					<li>
+						<a href="#">Last minute</a>
+					</li>
+					<li>
+						<a href="#">Promocje</a>
+					</li>
+					<li>
+						<a href="#">Aktualności</a>
+					</li>
+					<li>
+						<a href="#">O nas</a>
+					</li>
+					<li>
+						<a href="#">Kontakt</a>
+					</li>
+				</ul>
+			</nav>
+			<ul class="social flexBlock">
+				<li>
+					<a href="#">
+						<img src="images/social/facebook.png" alt=""/>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/social/snap.png" alt=""/>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/social/youtube.png" alt=""/>
+					</a>
+				</li>
+			</ul>
+	</div>
+</header>
+			<section>
+				<div class="formbox center flexBlock" data-aos="fade-up">
+					<form action="#" method="get" class="flexBlock">
+						<input name="q" type="text" placeholder="Gdzie chcesz się udać..." />
+						<button type="submit">Wyślij</button>
+					</form>	
+					<div class="flexBlock">
+						<span></span>
+						<a href="#" class="flexBlock">wyszukiwanie zaawansowane</a>
+					</div>
+				</div>
+				<div class="offer center ">
+					<div class="headerbox">
+						<p>Nasze Topowe</p>
+						<h4>Wycieczki</h4>
+					</div>
+					<div class="list flexBlock">
+						<div class="item" data-aos="fade-up">
+							<div class="image flexBlock" style="background:url(images/offer/1.jpg) no-repeat center / cover">
+								<h3>Europa</h3>
+								<h2>Budapeszt</h2>
+								<a href="#">Europa - Budapeszt </a>
+							</div>
+							<span class="promocja flexBlock">PROMOCJA</span> <!-- flex bo łatwiej zarządzać, żeby można było go rozciągnąć -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper auctor ligula, eget pulvinar urna sodales sed.</p>
+							<div class="linkbox flexBlock">
+								<span class="text">DOSTĘPNE OD<strong>1900 PLN</strong></span> <!-- zamieniamy stronga na blokowy, w css to nie jest błąd (nie można blokowych dawać do liniowych) + nie maspacji bo robią odstęp-->
+								<span class="break"></span>
+								<a href="#">WIĘCEJ</a>
+								
+							</div>
+						</div>
+						<div class="item" data-aos="fade-up">
+							<div class="image flexBlock" style="background:url(images/offer/1.jpg) no-repeat center / cover">
+								<h3>Europa</h3>
+								<h2>Budapeszt</h2>
+								<a href="#">Europa - Budapeszt </a>
+							</div>
+							<span class="promocja flexBlock">PROMOCJA</span> <!-- flex bo łatwiej zarządzać, żeby można było go rozciągnąć -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper auctor ligula, eget pulvinar urna sodales sed.</p>
+							<div class="linkbox flexBlock">
+								<span class="text">DOSTĘPNE OD<strong>1900 PLN</strong></span> <!-- zamieniamy stronga na blokowy, w css to nie jest błąd (nie można blokowych dawać do liniowych) + nie maspacji bo robią odstęp-->
+								<span class="break"></span>
+								<a href="#">WIĘCEJ</a>
+								
+							</div>
+						</div>
+						<div class="item" data-aos="fade-up">
+							<div class="image flexBlock" style="background:url(images/offer/1.jpg) no-repeat center / cover">
+								<h3>Europa</h3>
+								<h2>Budapeszt</h2>
+								<a href="#">Europa - Budapeszt </a>
+							</div>
+							<span class="promocja flexBlock">PROMOCJA</span> <!-- flex bo łatwiej zarządzać, żeby można było go rozciągnąć -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper auctor ligula, eget pulvinar urna sodales sed.</p>
+							<div class="linkbox flexBlock">
+								<span class="text">DOSTĘPNE OD<strong>1900 PLN</strong></span> <!-- zamieniamy stronga na blokowy, w css to nie jest błąd (nie można blokowych dawać do liniowych) + nie maspacji bo robią odstęp-->
+								<span class="break"></span>
+								<a href="#">WIĘCEJ</a>
+								
+							</div>
+						</div>
+						<div class="item" data-aos="fade-up">
+							<div class="image flexBlock" style="background:url(images/offer/1.jpg) no-repeat center / cover">
+								<h3>Europa</h3>
+								<h2>Budapeszt</h2>
+								<a href="#">Europa - Budapeszt </a>
+							</div>
+							<span class="promocja flexBlock">PROMOCJA</span> <!-- flex bo łatwiej zarządzać, żeby można było go rozciągnąć -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper auctor ligula, eget pulvinar urna sodales sed.</p>
+							<div class="linkbox flexBlock">
+								<span class="text">DOSTĘPNE OD<strong>1900 PLN</strong></span> <!-- zamieniamy stronga na blokowy, w css to nie jest błąd (nie można blokowych dawać do liniowych) + nie maspacji bo robią odstęp-->
+								<span class="break"></span>
+								<a href="#">WIĘCEJ</a>
+								
+							</div>
+						</div>
+						<div class="item" data-aos="fade-up">
+							<div class="image flexBlock" style="background:url(images/offer/1.jpg) no-repeat center / cover">
+								<h3>Europa</h3>
+								<h2>Budapeszt</h2>
+								<a href="#">Europa - Budapeszt </a>
+							</div>
+							<span class="promocja flexBlock">PROMOCJA</span> <!-- flex bo łatwiej zarządzać, żeby można było go rozciągnąć -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper auctor ligula, eget pulvinar urna sodales sed.</p>
+							<div class="linkbox flexBlock">
+								<span class="text">DOSTĘPNE OD<strong>1900 PLN</strong></span> <!-- zamieniamy stronga na blokowy, w css to nie jest błąd (nie można blokowych dawać do liniowych) + nie maspacji bo robią odstęp-->
+								<span class="break"></span>
+								<a href="#">WIĘCEJ</a>
+								
+							</div>
+						</div>
+						<div class="item" data-aos="fade-up">
+							<div class="image flexBlock" style="background:url(images/offer/1.jpg) no-repeat center / cover">
+								<h3>Europa</h3>
+								<h2>Budapeszt</h2>
+								<a href="#">Europa - Budapeszt </a>
+							</div>
+							<span class="promocja flexBlock">PROMOCJA</span> <!-- flex bo łatwiej zarządzać, żeby można było go rozciągnąć -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper auctor ligula, eget pulvinar urna sodales sed.</p>
+							<div class="linkbox flexBlock">
+								<span class="text">DOSTĘPNE OD<strong>1900 PLN</strong></span> <!-- zamieniamy stronga na blokowy, w css to nie jest błąd (nie można blokowych dawać do liniowych) + nie maspacji bo robią odstęp-->
+								<span class="break"></span>
+								<a href="#">WIĘCEJ</a>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="lastminute">
+					<div class="center">
+						<div class="headerbox">
+							<p>Wycieczki</p>
+							<h4>Last Minute</h4>
+						</div>
+						<div class="list flexBlock owl-carousel">
+							<div class="item flexBlock" data-aos="fade-right">
+								<div class="image flexBlock" style="background:url(images/lastminute/1.jpg) no-repeat center / cover">
+									<h3>Egipt</h3>
+									<h2>Sharm El sheikh</h2>
+									<a href="#">Egipt - Sharm El sheikh	</a>
+								</div>
+								<div class="content">
+									<p>Cras odio diam, interdum sed magna non, ornare congue ante. Ut vel metus augue. Etiam sed enim ege stas, ornare lorem vitae, ultricies mi. Fusce eu posuere libero, eget tempor mi.</p>
+									<ul class="flexBlock">
+										<li class="flexBlock wylot">
+											<span>Wylot <strong>Kraków, Airport</strong> </span>
+										</li>
+										<li class="flexBlock przylot">
+											<span>Przylot <strong>Egipt, Sharm</strong> </span>
+										</li>
+										<li class="flexBlock ocena">
+											<span>Ocena <strong>8,5 / 10</strong> </span>
+										</li>
+										<li class="flexBlock hotel">
+											<span>Hotel <strong>Egipt, Sharm</strong> </span>
+										</li>
+									</ul>
+									<div class="linkbox flexBlock">
+										<span class="text">DOSTĘPNE OD<strong>2500 PLN</strong></span>
+										<span class="break"></span>
+										<a href="#">WIĘCEJ</a>
+									</div>
+								</div>
+							</div>
+							<div class="item flexBlock"  data-aos="fade-left">   <!-- z biblioteki wczytujesz efekt ,,pojawienia" się na stronie po scrollowaniu -->
+								<div class="image flexBlock" style="background:url(images/lastminute/1.jpg) no-repeat center / cover">
+									<h3>Egipt</h3>
+									<h2>Sharm El sheikh</h2>
+									<a href="#">Egipt - Sharm El sheikh	</a>
+								</div>
+								<div class="content">
+									<p>Cras odio diam, interdum sed magna non, ornare congue ante. Ut vel metus augue. Etiam sed enim ege stas, ornare lorem vitae, ultricies mi. Fusce eu posuere libero, eget tempor mi.</p>
+									<ul class="flexBlock">
+										<li class="flexBlock wylot">
+											<span>Wylot <strong>Kraków, Airport</strong> </span>
+										</li>
+										<li class="flexBlock przylot">
+											<span>Przylot <strong>Egipt, Sharm</strong> </span>
+										</li>
+										<li class="flexBlock ocena">
+											<span>Ocena <strong>8,5 / 10</strong> </span>
+										</li>
+										<li class="flexBlock hotel">
+											<span>Hotel <strong>Egipt, Sharm</strong> </span>
+										</li>
+									</ul>
+									<div class="linkbox flexBlock">
+										<span class="text">DOSTĘPNE OD<strong>2500 PLN</strong></span>
+										<span class="break"></span>
+										<a href="#">WIĘCEJ</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer>
+					<div class="container flexBlock">
+						<p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et elit bibendum,ornare est eu, mollis libero. Nunc risus sapien, sodales nec nislsit amet, pellentesque porttitor ex. </p>
+					</div>
+					<p>@Marcin Grabowski 2021</p>
+				</footer>											
+																		
+				<script>
+					AOS.init();
+					Test.slider();				//Test.informacje(16,"test");
+				</script>
+</body>
+</html>
+
+
+<!--
+display flex zawsze na rodzica
+display:flex;							-każde dziecko staje się zdefiniowanym elementem liniwoym
+justify-content :flex-start;            - poziomo
+				:center;
+				:flex-end;
+				:space-around;
+				:space-between;
+order:(np2);
+align-items		:flex-end;
+				:space-around;
+				:space-between;
+
+flex:auto;      -rozciąga element maksymalnie horyzontalnie    -nakładamy na dziecko display:flex
+
+style="fill:#f1f1f1;"						-zmienia kolor .svg , wpisz w html
+
+stosować listy bo na google się będzie lepiej wyświetlać (np allegro w wyszukiwarce)
+calc(100% - 200px) funkcja w css
+
+
+<form action="adrespliku.js" method="post/get">  -blokowy - tworzy formularz - post-metoda chroniona(systemy logowania) get-odbiera dane z adresu(np wyszukiwarki)
+	<input name="imie" type="text" value="" placeholder=""/>
+	
+	
+</form>
+
+
+text
+password
+checkbox	- ,,prześli"
+submit	- używać <button> zamiast tego
+reset - kasuje dane z formularza
+radio - jednokrotny wybór
+number - np nr telefonu 
+date - rezerwacja / nie działa wszędzie i moze powodować błąd
+email 
+range - zakres
+color
+hidden
+
+h1 - może być tylko raz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->

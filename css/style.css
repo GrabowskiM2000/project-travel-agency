@@ -1,0 +1,514 @@
+:root{						/*tworzenie zmiennych*/
+	--red:#de1a54;
+	--darkred:#ad0d3c;
+	--white:#fff;
+	--gray:#7a7a7a;
+	--yellow:#fbd800;
+	--text:#767676;
+	--darktext:#110e20;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	text-decoration:none;
+	list-style:none;
+	font-family: 'Open Sans', sans-serif;
+}
+body {
+	background: url(../images/slider/logo.webp) no-repeat center top;
+}
+body.active{
+	background:red;
+}
+
+.center{
+	margin:0 auto;
+	max-width:1152px;
+	padding:0 20px;
+}
+.flexBlock{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+a,img, .transitionEl, li span, :before, :after{
+	-webkit-transition: all 200ms linear;	/*optymalizuj kod - piszemy tutaj raz a nie wiele razy*/
+	-moz-transition: all 200ms linear;
+	-ms-transition: all 200ms linear;
+	-o-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+.linkbox{
+	background:var(--red);
+	border-bottom:2px solid var(-darkred);
+	width:228px;
+	padding:0 15px;
+	height:48px;
+	margin:16px auto 0;
+}
+/**/
+/*linetop - header*/
+header .linetop{
+	background:rgba(31,31,31,.9);
+	height:64px;
+}
+header .linetop .user{
+	width:100%;
+	max-width:214px;
+}
+header .linetop .center{
+	height:64px;
+}
+header .linetop .image{
+	background:#181818 url(../images/icons/lock.png) no-repeat center;
+	height:43px;
+	width:43px;
+	border:1px solid #292929;
+	margin-right:12px;
+}
+header .linetop .brake{
+	color:var(--gray);
+	margin:0 2px;
+}
+header .linetop a{
+	font-size:15px;
+	color:var(--white);
+}
+header .linetop a.red{
+	color:var(--red);
+}
+header .linetop a:hover{
+	color:var(--yellow);
+}
+header .linetop .adresy img{
+	margin-right:12px;
+}
+header .linetop .adresy a:hover{
+	color:var(--yellow);
+}
+header .linetop li+li{
+	margin-left:45px;
+}
+
+/*linebottom - header*/
+
+header .linebottom {
+	height:122px;
+}
+header .linebottom nav{
+	flex:auto;
+}
+header .linebottom nav ul a{
+	color:var(--white);
+	font-size:15px;
+	text-transform:lowercase;	/* w html pisz z dużych bo estetyczniej wygląda kod w prgoramie i na przeglądarce a edytuj jak chcesz w css */
+}
+header .linebottom nav ul a:hover{
+	color:var(--yellow);
+}
+header .linebottom .break{		/*jest tak zrobiony bo border nie jest tak dobrze edytowalny*/
+	min-width:1px;
+	height:21px;
+	background:var(--white);
+	margin:0 35px;
+}
+header .linebottom .social{
+	margin-left:40px;		
+
+}
+header .linebottom .social li+li{ 		/* nakłada style na element 'li' jeżeli przed nim jest element 'li' */
+	margin-left:24px;
+}
+header .linebottom .social li{
+	transition:transform 200ms ease;
+}
+header .linebottom .social li:hover{
+	transform:scale(1.6,1.6);
+}
+
+
+/*formbox - section*/
+section .formbox{
+	height:404px;
+	flex-direction:column;      /*uwaga bo a-i i j-c zmieniają się miejscami*/
+	justify-content:center;
+}
+section .formbox form{
+	width:100%;
+	max-width:510px;
+	background-color:#f1f2f5;
+	border:2px solid #c8c8c8;
+}
+section .formbox input{
+	flex:auto;
+	height:74px;
+	border:none;
+	background:#f1f2f5;
+	padding-left:27px;
+	font-size:17px;
+	outline:none;
+}
+section .formbox button{
+	background:url(../images/icons/search.png) no-repeat center;
+	border:none;
+	height:100%;
+	align-self:stretch;   /* musi być flex rodzic, */
+	width:94px;
+	font-size:0;			/*link musi zawierać text bo wychodzi błąd*/
+	outline:none;			/*w momenci naciskania przycisku usówa czarną linię*/
+	cursor:pointer;
+}
+section .formbox div{
+	width:100%;
+	max-width:510px;
+	justify-content:flex-end;
+	padding:18px 17px 0 0;
+}
+section .formbox a{
+	color:#d1d2d5;
+	font-size:13px;
+}
+section .formbox a:before{			/*pseudoelemet, przydatny do dodawania ikonek do tekstu*/
+	content: url(../images/icons/gear.png); 
+	line-height:0;
+	margin-right:8px;
+}
+
+/**/
+
+
+.headerbox {
+	padding-bottom:55px;
+}
+section .offer .headerbox p{
+	color:#a1a1a1;
+	font-size:18px;
+	text-transform:uppercase;
+}
+section .offer .headerbox h4{
+	color:#1a1a1a;
+	font-size:45px;
+	text-transform:uppercase;
+	margin-top:-11px;
+}
+
+/*offer - section*/
+
+section .offer{
+	margin-top:66px;
+}
+section .offer .list{
+	margin:-20px;		/*sztuczka by itemy był od siebie oddalone a nie od krawędzi rodzica vvv*/
+	flex-wrap:wrap;
+}
+section .offer .item{
+	flex:auto;
+	margin:20px;		/* ^^^ */
+	width:280px;
+	position:relative;
+
+}
+section .offer .image{
+	height:164px;
+	flex-direction:column;
+	justify-content:center;
+	position:relative;
+}
+section .offer .image a{	/*całe zdjęcie jest linkiem*/
+	position:absolute;
+	height:100%;
+	width:100%;
+	font-size:0;
+}
+section .offer h2{
+	color:var(--yellow);
+	text-transform:uppercase;
+	font-size:26px;
+	margin-top:-5px;
+}
+section .offer h3{
+	color:var(--white);
+	font:400 16px Opan Sans;
+	text-transform:uppercase;
+}
+
+
+/*---------*/
+
+section .offer .list .item > span{  		/*to samo co .promocja*/
+	position:absolute;
+	background-color:var(--yellow);
+	color:black;
+	padding:11px 25px;
+	
+	margin:0 auto;
+	left:0;
+	right:0;								/*spsób na środkowanie*/      /*position absolut top,left,right,bot:0; musi być width i height i wtedy margin:auto środkuje element względem rodzica*/
+	width:134px;
+	height:32px;
+	justify-content:center;
+	margin-top:-16px;
+	
+}
+section .offer .item p{
+	margin-top:35px;
+	padding:0 10px;
+	text-align:center;
+	font-size:15px;
+	color:var(--text);						/*em od 1.6 do 2.0 dobrze wygląda na text*/
+	line-height:1.8em;
+	
+}
+
+/*linkbox*/
+
+.linkbox .text{
+	color:var(--white);
+	font-size:11px;
+}
+.linkbox strong{
+	display:block;
+	font-size:20px;
+	margin-top:-5px;
+}
+.linkbox .break{
+	background:var(--darkred);
+	width:1px;
+	height:32px;
+	margin:auto;
+}
+.linkbox a{
+	color:var(--white);
+	font-size:15px;
+	
+}
+
+/*lastminute - section*/
+
+section .lastminute{
+	margin-top:66px;
+	padding:66px 0;
+	background:url(../images/lastminute/bg.jpg) no-repeat center / cover;
+}
+section .lastminute .list{
+	margin:-30px -20px;		
+}
+section .lastminute .headerbox p{
+	color:var(--darktext);
+	font-size:18px;
+	text-transform:uppercase;
+}
+section .lastminute .headerbox h4{
+	color:#1a1a1a;
+	font-size:45px;
+	text-transform:uppercase;
+	margin-top:-11px;
+}
+section .lastminute .item{
+	margin:30px 20px;		
+	background:var(--darktext);
+	padding:23px;
+}
+section .lastminute .image{
+	height:320px;
+	min-width:220px;
+	flex-direction:column;
+	justify-content:flex-end;
+	align-items:flex-start;
+	position:relative;
+	margin-right:19px;
+	padding:16px;
+}
+section .lastminute .image a{
+	position:absolute;
+	height:100%;
+	width:100%;
+	font-size:0;
+}
+section .lastminute .item ul{
+	flex-wrap:wrap;
+	margin:-5px;
+}
+section .lastminute .item p{
+	color:#9a9a9a;
+	font-size:15px;
+	line-height:1.8em;
+	border-bottom:1px solid #252042;
+	padding-bottom:10px;
+	margin-bottom:10px;
+}
+section .lastminute .item li{
+	margin:5px;
+	width:100px;
+	flex:auto;
+	justify-content:flex-start;
+}
+section .lastminute .item li:before{
+	content:url(../images/lastminute/airStart.png);
+	margin-right:10px;
+}
+section .lastminute li.przylot:before{
+	content:url(../images/lastminute/aireEnd.png);
+}
+section .lastminute li.ocena:before{
+	content:url(../images/lastminute/star.png);
+}
+section .lastminute li.hotel:before{
+	content:url(../images/lastminute/bed.png);
+}
+section .lastminute li span{
+	font-size:15px;
+	color:#9a9a9a;
+}
+section .lastminute li strong{
+	display:block;
+	margin-top:-3px;
+	font:400 13px Open Sans;
+	color:var(--white);
+}
+section .lastminute .image h3{
+	padding:7px 10px;
+	min-width:84px;
+	background:var(--yellow);
+	color:var(--darktext);
+	text-transform:uppercase;
+	font:400 15px Open Sans;
+}
+section .lastminute .image h2{
+	padding:7px 10px;
+	width:100%;
+	background:var(--darktext);
+	color:var(--white);
+	text-transform:uppercase;
+	font:400 18px Open Sans;
+}
+
+/*footer*/
+
+footer .container{
+	height:290px;
+	background:var(--darktext);
+	color:#5a5478;
+	text-align:center;
+	line-height:1.8em;
+}
+footer .container p{
+	max-width:620px;
+}
+footer > p{
+	background:#0b0917;
+	height:88px;
+	font-size:13px;
+	color:#524f65;
+	text-align:center;
+	padding:35px 15px;
+}
+
+/*hamburger*/
+
+nav .mobile{
+	display:none;
+	height:35px;
+	color:var(--white);
+}
+nav .mobile span,
+nav .mobile span:before,
+nav .mobile span:after{
+	content:"";
+	width:35px;						/*ustalamy długość kresek w hamburgerze*/
+	height:3px;						/*powstał bo odgórnie jest display:inline-flex; na .mobile*/
+	background:var(--white);
+	margin-left:10px;
+}
+nav .mobile span:before,
+nav .mobile span:after{
+	position:absolute;
+	margin:-10px 0 0 0;
+}
+nav .mobile span:after{
+	margin:10px 0 0 0;
+}
+nav.active .mobile  span:before{
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	margin:0;
+}
+nav.active .mobile  span:after{
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	margin:0;
+}
+nav.active .mobile span{
+	background-color:transparent;
+}
+
+/************************************/
+/*****************RWD****************/
+/************************************/
+
+
+@media (max-width:1000px){
+	nav ul.flexBlock{
+		display:none;
+		position:absolute;
+		left:0;
+		right:0;
+		background:rgba(0,0,0,.5); 			/*zmienic*/
+		z-index: 2;
+	}
+	nav ul a{
+		display:block;
+		padding:15px 10px;
+		text-align:center;
+		font-size:19px !important;
+	}
+	nav .mobile{
+		display:inline-flex;				/*nie zajmuje 100% plus zalety flexa(można wyśrodkować)*/
+	}
+}
+
+@media (max-width:700px){
+	header .linetop li+li span{
+		font-size:0;
+	}
+	header .linetop li+li img{
+		margin-right:0;
+	}
+}
+@media (max-width:615px){
+	section .lastminute .item{
+		flex-wrap:wrap;
+	}
+	section .lastminute .item > *{
+		width:100%;
+	}
+	section .lastminute .item > *+*{
+		margin-top:30px;
+	}
+}
+@media (max-width:500px){
+	header .linetop li span{
+		font-size:0;
+	}
+	header .linetop .adresy img{		/*nie wyszło bez .adresy bo na górze była dokładniejsza ścieżka*/
+		margin-right:0;
+	}
+}
+@media (max-width:345px){
+	header .linetop li+li{
+		margin-left:20px;
+	}	
+	header .linetop ul{
+		display:none;
+	}
+	header .linetop .user{
+		max-width:100%;
+	}
+}
